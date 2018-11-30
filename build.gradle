@@ -11,9 +11,9 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "1.0"
-group = "fr.zeamateis.execution" 
-archivesBaseName = "execution"
+version = "0.0.1"
+group = "fr.zeamateis.hitbox" 
+archivesBaseName = "hitbox_api"
 
 sourceCompatibility = targetCompatibility = '1.8' 
 compileJava {
@@ -25,21 +25,6 @@ minecraft {
     runDir = "run"
     mappings = "snapshot_20171003"
     makeObfSourceJar = true
-}
-
-repositories {
-    maven {
-        name = "leviathan"
-        url = "http://maven.leviathan-studio.com/artifactory/leviathan/"
-    }
-}
-
-dependencies {		
-	compile 'com.leviathanstudio:CraftStudio:1.0.0.93-mc1.12-alpha:dev'
-    // https://mvnrepository.com/artifact/com.badlogicgames.gdx/gdx-bullet
-    compile group: 'com.badlogicgames.gdx', name: 'gdx-bullet', version: '1.9.9'
-	// https://mvnrepository.com/artifact/org.apache.commons/commons-math3
-	compile group: 'org.apache.commons', name: 'commons-math3', version: '3.6.1'
 }
 
 processResources {
