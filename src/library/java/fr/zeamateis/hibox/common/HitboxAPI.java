@@ -2,7 +2,10 @@ package fr.zeamateis.hibox.common;
 
 import org.apache.logging.log4j.Logger;
 
+import fr.zeamateis.hibox.common.hitbox.HitboxCapabilities;
 import fr.zeamateis.hibox.proxy.CommonProxy;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.CapabilityInject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -26,6 +29,10 @@ public class HitboxAPI {
 	@SidedProxy(clientSide = "fr.zeamateis.hibox.proxy.ClientProxy", serverSide = "fr.zeamateis.hibox.proxy.ServerProxy")
 	private static CommonProxy proxy;
 
+    @CapabilityInject(HitboxCapabilities.class)
+    public static final Capability<HitboxCapabilities> HITBOX_CAP = null;
+
+	
 	@EventHandler
 	public void onPreInitialization(FMLPreInitializationEvent event) {
 		logger = event.getModLog();
